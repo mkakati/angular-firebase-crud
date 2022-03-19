@@ -1,8 +1,7 @@
-<h1>Employee Data</h1>
+<h1>skyFare</h1>
 
 <p>
-  This component demonstrates fetching Employee data from Google cloud
-  firestore.
+  This site fetching special fare data from skyFare owner & partner.
 </p>
 
 <p *ngIf="!employeeList"><em>Loading...</em></p>
@@ -13,10 +12,10 @@
 >
   <thead class="thead-dark">
     <tr>
-      <th>Name</th>
-      <th>Gender</th>
-      <th>Department</th>
-      <th>City</th>
+      <th>Sector</th>
+      <th>Travel Date</th>
+      <th>Flight</th>
+      <th>Fare</th>
       <th *ngIf="appUser">Actions</th>
     </tr>
   </thead>

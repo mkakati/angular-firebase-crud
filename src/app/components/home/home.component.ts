@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   delete(employeeID) {
-    if (confirm("Are you sure you want to delete this employee record ??")) {
+    if (confirm("Are you sure you want to delete this deal fare record ??")) {
       this.employeeService.deleteEmployee(employeeID).then(
         () => {
           this.getEmployees();

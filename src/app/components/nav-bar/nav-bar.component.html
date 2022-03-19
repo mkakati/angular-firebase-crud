@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg bg-info shadow-sm">
-  <a class="navbar-brand" [routerLink]="['/']">Home</a>
+  <a class="navbar-brand" [routerLink]="['/']">Deal Fare</a>
   <button
     class="navbar-toggler"
     type="button"
@@ -14,7 +14,7 @@
   <div class="collapse navbar-collapse" id="navbarNavDropdown">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active" *ngIf="appUser">
-        <a class="nav-link" [routerLink]="['/add-employee']">Add employee</a>
+        <a class="nav-link" [routerLink]="['/add-employee']">Add Deal Fare</a>
       </li>
     </ul>
     <ul class="navbar-nav">
@@ -27,14 +27,14 @@
       <li class="nav-item active">
         <a class="nav-link" *ngIf="appUser" (click)="logout()">Logout</a>
       </li>
-      <li class="nav-item active">
+      <!-- <li class="nav-item active">
         <a
           class="nav-link"
           href="https://github.com/AnkitSharma-007/angular-firebase-crud"
           target="_blank"
           >GitHub</a
         >
-      </li>
+      </li> -->
     </ul>
   </div>
 </nav>
