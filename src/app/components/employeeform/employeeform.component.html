@@ -1,142 +1,151 @@
 <h1>Deal Fare Details</h1>
 <hr />
 
-<div class="row">
-  <div class="col-md-6 mx-auto">
-    <div class="card">
-      <div class="card-header">
-        <h2>{{ title }} Deal</h2>
-      </div>
-      <div class="card-body">
-        <form
-          #employeeForm="ngForm"
-          (ngSubmit)="employeeForm.form.valid && onEmployeeFormSubmit()"
-          novalidate
-        >
-          <div class="form-group">
-            <label for="name">Sector</label>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="employee.name"
-              name="name"
-              #name="ngModel"
-              required
-            />
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && name.errors?.required"
-            >
-              Name is required
-            </span>
-          </div>
-          <!-- <div class="form-group">
-            <label for="gender">Gender</label>
-            <select
-              placeholder="Select Gender"
-              class="form-control"
-              [(ngModel)]="employee.gender"
-              name="gender"
-              #gender="ngModel"
-              required
-            >
-              <option value="">-- Select Gender --</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && gender.errors?.required"
-            >
-              Gender is required
-            </span>
-          </div> -->
+<div id="MyDIv" style="margin-left: 45px;" class="main-container">
 
-          <div class="form-group">
-            <label for="name">Travel date</label>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="employee.gender"
-              name="gender"
-              #name="ngModel"
-              required
-            />
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && name.errors?.required"
-            >
-              Travel date is required
-            </span>
-          </div>
-
-          <div class="form-group">
-            <label for="department">Flight</label>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="employee.department"
-              name="department"
-              #department="ngModel"
-              required
-            />
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && department.errors?.required"
-            >
-              Flight Detail is required
-            </span>
-          </div>
-          <!-- <div class="form-group">
-            <label for="city">Fare</label>
-            <select
-              class="form-control"
-              [(ngModel)]="employee.city"
-              name="city"
-              #city="ngModel"
-              required
-            >
-              <option value="">-- Select City --</option>
-              <option *ngFor="let city of cityList" value="{{ city.cityName }}">
-                {{ city.cityName }}
-              </option>
-            </select>
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && city.errors?.required"
-            >
-              Fare is required
-            </span>
-          </div> -->
-
-          <div class="form-group">
-            <label for="department">Fare</label>
-            <input
-              type="text"
-              class="form-control"
-              [(ngModel)]="employee.city"
-              name="city"
-              #department="ngModel"
-              required
-            />
-            <span
-              class="text-danger"
-              *ngIf="employeeForm.submitted && department.errors?.required"
-            >
-              Fare is required
-            </span>
-          </div>
-
-
-
-          <div class="form-group text-right">
-            <button type="submit" class="btn btn-primary mr-2">Save</button>
-            <button type="button" class="btn btn-danger" (click)="cancel()">
-              Cancel
-            </button>
-          </div>
-        </form>
+  <div class="row">
+    <div class="col-md-6 mx-auto">
+      <div class="card">
+        
+        <div class="card-header">
+          <h2>{{ title }} Deal</h2>
+        </div>
+        <div class="card-body">
+          <form
+            #employeeForm="ngForm"
+            (ngSubmit)="employeeForm.form.valid && onEmployeeFormSubmit()"
+            novalidate
+          >
+            <div class="form-group">
+              <label for="name">Sector</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="employee.name"
+                name="name"
+                #name="ngModel"
+                required
+              />
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && name.errors?.required"
+              >
+                Name is required
+              </span>
+            </div>
+            <!-- <div class="form-group">
+              <label for="gender">Gender</label>
+              <select
+                placeholder="Select Gender"
+                class="form-control"
+                [(ngModel)]="employee.gender"
+                name="gender"
+                #gender="ngModel"
+                required
+              >
+                <option value="">-- Select Gender --</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+              </select>
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && gender.errors?.required"
+              >
+                Gender is required
+              </span>
+            </div> -->
+  
+            <div class="form-group">
+              <label for="name">Travel date</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="employee.gender"
+                name="gender"
+                #name="ngModel"
+                required
+              />
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && name.errors?.required"
+              >
+                Travel date is required
+              </span>
+            </div>
+  
+            <div class="form-group">
+              <label for="department">Flight</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="employee.department"
+                name="department"
+                #department="ngModel"
+                required
+              />
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && department.errors?.required"
+              >
+                Flight Detail is required
+              </span>
+            </div>
+            <!-- <div class="form-group">
+              <label for="city">Fare</label>
+              <select
+                class="form-control"
+                [(ngModel)]="employee.city"
+                name="city"
+                #city="ngModel"
+                required
+              >
+                <option value="">-- Select City --</option>
+                <option *ngFor="let city of cityList" value="{{ city.cityName }}">
+                  {{ city.cityName }}
+                </option>
+              </select>
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && city.errors?.required"
+              >
+                Fare is required
+              </span>
+            </div> -->
+  
+            <div class="form-group">
+              <label for="department">Fare</label>
+              <input
+                type="text"
+                class="form-control"
+                [(ngModel)]="employee.city"
+                name="city"
+                #department="ngModel"
+                required
+              />
+              <span
+                class="text-danger"
+                *ngIf="employeeForm.submitted && department.errors?.required"
+              >
+                Fare is required
+              </span>
+            </div>
+  
+  
+  
+            <div class="form-group text-right">
+              <button type="submit" class="btn btn-primary mr-2">Save</button>
+              <button type="button" class="btn btn-danger" (click)="cancel()">
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
   </div>
+        
 </div>
+
+<div> <button  (click)="exportAsPDF('MyDIv')">Export To PDF</button></div>
+
+

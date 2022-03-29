@@ -11,6 +11,7 @@ export class NavBarComponent {
   appUser: firebase.User;
 
   constructor(private authService: AuthService) {
+    debugger;
     this.authService.appUser$.subscribe((appUser) => (this.appUser = appUser));
   }
 

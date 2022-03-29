@@ -20,6 +20,7 @@ export class AuthService {
   }
 
   login() {
+    debugger;
     // Store the return URL in localstorage, to be used once the user logs in successfully
     const returnUrl =
       this.route.snapshot.queryParamMap.get("returnUrl") || this.router.url;
@@ -39,6 +40,7 @@ export class AuthService {
 
   // Save the user data to firestore on login
   private updateUserData(user) {
+    debugger;
     const userRef = this.afs.doc(`appusers/${user.uid}`);
     const data = {
       name: user.displayName,

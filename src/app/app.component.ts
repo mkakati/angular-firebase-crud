@@ -1,6 +1,8 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
 import { AuthService } from "./services/auth.service";
+import * as jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: "app-root",

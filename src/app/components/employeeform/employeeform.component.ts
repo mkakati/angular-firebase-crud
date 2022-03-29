@@ -5,6 +5,8 @@ import { EmployeeService } from "src/app/services/employee.service";
 import { Router, ActivatedRoute, ParamMap } from "@angular/router";
 import { ReplaySubject } from "rxjs";
 import { takeUntil } from "rxjs/internal/operators/takeUntil";
+import * as jspdf from 'jspdf';
+import html2canvas from 'html2canvas';
 
 @Component({
   selector: "app-employeeform",
@@ -60,6 +62,19 @@ export class EmployeeformComponent implements OnInit {
       });
     }
   }
+
+  exportAsPDF(divId)
+    {
+         debugger;
+        let data = document.getElementById(divId);  
+        html2canvas(data).then(canvas => {
+        const contentDataURL = canvas.toDataURL('image/png')  // 'image/jpeg' for lower quality output.
+        let pdf = new jspdf.jsPDF('l', 'cm', 'a4'); //Generates PDF in landscape mode
+        // let pdf = new jspdf('p', 'cm', 'a4'); Generates PDF in portrait mode
+        pdf.addImage(contentDataURL, 'PNG', 0, 0, 29.7, 21.0);  
+        pdf.save('Filename.pdf');   
+      }); 
+    }
 
   cancel() {
     this.router.navigate(["/"]);
